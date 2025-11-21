@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: metrics
+    description: "Quarterly metrics based on SEC quarterly financials"
+    columns:
+      - name: company_name
+        description: "Company name"
+      - name: preferred_label
+        description: "Human readable metric label"
+      - name: units
+        description: "Units for the metric"
+      - name: value
+        description: "Metric numeric value"
+      - name: period_end_date
+        description: "Period end date"
+        tests: [not_null]
+      - name: year
+        description: "Extracted year"
+      - name: quarter
+        description: "Extracted quarter"

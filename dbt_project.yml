@@ -1,0 +1,12 @@
+name: sec_filings
+version: '1.0'
+config-version: 2
+profile: sec_filings_profile
+model-paths: ["models"]
+seed-paths: ["data"]
+target-path: "target"
+clean-targets: ["target", "dbt_modules"]
+
+models:
+  sec_filings:
+    +materialized: view
